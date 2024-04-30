@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Fjalla+One&family=Lugrasimo&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(248, 248, 248);
+   
+}
+section{
+    background: rgb(253, 246, 230);
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: rgb(255, 252, 244);
+    color: rgb(97, 15, 89);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(97, 15, 89);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    margin: 20px;
+    font-weight: 550;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #080808;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.hero {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    color: rgb(85, 14, 78);
+    font-weight: bolder;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+
+.hero h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    animation: texttoAnimation 2s ;
+    position: absolute;
+    top:40%;
+    left:10%;
+   
+}
+.hero p{
+    text-align: center;
+    
+    animation: texttoAnimation 2s ;
+    position: absolute;
+    top: 45%;
+    left:10%; 
+    margin-top: 10px;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@keyframes texttoAnimation {
+    0% {
+        transform: translateY(-100%); /* Start position off-screen to the left */
+    }
+    100% {
+        transform: translateY(0); /* End position */
+    }
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   
+    
+   
+}
+
+
+.hero-section {
+    overflow: hidden;
+}
+.img-hero{
+ position: absolute;
+ top: 0;
+ right: 0;
+ animation: imageAnimation 2s forwards; 
+
+}
+
+
+
+
+.search-box {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(51, 4, 53);
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1rem;
+    background:rgb(97, 15, 89);;
+    color: white;
+    cursor: pointer;
+}
+
+.recipes {
+    padding: 50px 0;
+    display: block;
+    margin: 2rem;
+}
+
+.recipes h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: rgb(51, 4, 53);
+    font-family: "DM Serif Text", serif;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px; 
+    
+ 
+}
+
+.recipe-card {
+    position: relative; 
+    background:  rgb(255, 252, 244);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+}
+
+.recipe-card h2{
+    color: rgb(51, 4, 53);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card img:hover {
+    filter: grayscale(1);
+    transform: scale(1.03);
+}
+
+.recipe-card h2,
+.recipe-card p {
+    text-align: center;
+    padding: 20px;
+}
+
+.recipe-card a {
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(252, 243, 226);
+    color: rgb(42, 2, 61);
+    padding: 15px 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+footer {
+    background: rgb(255, 251, 238);
+    padding: 20px 0;
+    color: rgb(58, 6, 54);
+    text-align: center;
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+    .recipe-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .recipe-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.recipe-card h2 {
+    margin-top: 2px; 
+    margin-bottom: 0px;
+}
+
+.recipe-card p {
+    margin-bottom: 50px; 
+}
+/* Existing CSS styles */
+
+.about-section {
+    width: 100%;
+    color: rgb(51, 4, 53);
+    font-weight: bolder;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+
+
+.contain-about {
+    overflow: hidden; 
+    margin-top: 20px; /* Add a gap between the containers */
+    display: flex; /* Use flexbox */
+}
+
+.about-section-text,
+.image-container {
+    flex: 1; /* Distribute remaining space equally */
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for containers */
+    font-size: 25px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 300;
+    background:  rgb(255, 252, 244);
+}
+.about-section-text p{ 
+    padding-top: 150px;
+    animation: textAnimation 2s forwards;
+       
+    }
+
+
+.image-container {
+    margin-left: 20px; /* Add a gap between the containers */
+    
+}
+.about-section h2{
+    font-size: 35px;
+    font-family: "DM Serif Text", serif;
+}
+
+.image-container img {
+    width: 100%;
+    max-height: 500px;
+    margin-top: 15px;
+    animation: imageAnimation 2s forwards;
+}
+#about:target .about-section-text p{
+    animation: textAnimation 2s forwards; /* Apply the text animation */
+}
+
+#about:target .image-container img{
+    animation: imageAnimation 2s forwards; /* Apply the image animation */
+}
+#home:target .about-section-text p{
+    animation: textAnimation 2s forwards; /* Apply the text animation */
+}
+
+#home:target .image-container img{
+    animation: imageAnimation 2s forwards; /* Apply the image animation */
+}
+
+/* Keyframes for text animation */
+@keyframes textAnimation {
+    0% {
+        transform: translateX(-100%); /* Start position off-screen to the left */
+    }
+    100% {
+        transform: translateX(0); /* End position */
+    }
+}
+
+/* Keyframes for image animation */
+@keyframes imageAnimation {
+    0% {
+        transform: translateX(100%); /* Start position off-screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* End position */
+    }
+}
+
+.recipe-details {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #070707;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px wheat;
+  }
+  
+  .recipe-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-details button {
+    display: block;
+    margin-top: 20px;
+   
+  }
+  .recipe-details button a {
+    text-decoration: none;
+    color:rgb(245, 244, 244);
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recipe-details button a:hover {
+    background-color: #0056b3;
+  }
+  
